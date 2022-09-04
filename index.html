@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+            * {
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #121113;
+        }
+
+        .sliderContainer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sliderContainer-buttons {
+            background-color: #363537;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #9A989A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sliderContainer-buttons:hover {
+            color: white;
+        }
+
+        .sliderContainer-slides {
+            padding: 10px;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 10px;
+            background-color: #363537;
+            width: 800px;
+            overflow: hidden;
+        }
+
+        .slide {
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            height: 225px;
+        }
+
+        .slide.tiny {
+            flex: 0 0 150px;
+        }
+
+        .slide.normal {
+            flex: 0 0 225px;
+        }
+
+        .slide.wide {
+            flex: 0 0 350px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sliderContainer">
+        <div class="sliderContainer-buttons previous"><i class="fa-solid fa-angle-left"></i></div>
+        <div class="sliderContainer-slides">
+            <div class="slide tiny" style="background-image: url('images/avatar_1.png')"></div>
+            <div class="slide normal" style="background-image: url('images/avatar_2.png')"></div>
+            <div class="slide wide" style="background-image: url('images/avatar_3.png')"></div>
+            <div class="slide normal" style="background-image: url('images/avatar_4.png')"></div>
+            <div class="slide normal" style="background-image: url('images/avatar_5.png')"></div>
+            <div class="slide normal" style="background-image: url('images/avatar_6.png')"></div>
+            <div class="slide tiny" style="background-image: url('images/avatar_7.png')"></div>
+            <div class="slide normal" style="background-image: url('images/avatar_8.png')"></div>
+            <div class="slide tiny" style="background-image: url('images/avatar_9.png')"></div>
+            <div class="slide normal" style="background-image: url('images/avatar_10.png')"></div>
+        </div>
+        <div class="sliderContainer-buttons next"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+</div>
+</body>
+<script src="./script.js"></script>
+</html>
